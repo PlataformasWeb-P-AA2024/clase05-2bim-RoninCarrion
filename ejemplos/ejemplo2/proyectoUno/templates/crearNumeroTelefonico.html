@@ -1,15 +1,38 @@
 {% extends "master.html" %}
 
 {% block content %}
-
-<h2>Crear Número Telefónico</h3>
-
+<h2>Crear Número Telefónico para {{estudiante}}</h2>
 <form action="" method="post">
-
-  {% csrf_token %}
-
-  {{formulario.as_p}}
-
-  <p><input type='submit' value='Agregar'/></p>
+    {% csrf_token %}
+    {{ formulario.as_p }}
+    <p><input type='submit' value='Agregar'/></p>
 </form>
+{% endblock %}
+
+{% block right_sidebar %}
+<div class="col-4 col-12-medium">
+    <div id="sidebar">
+        <section>
+            <h3>Información Adicional</h3>
+            <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
+            Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
+            Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
+            consequat etiam.</p>
+            <footer>
+                <a href="#" class="button icon solid fa-info-circle">Más Información</a>
+            </footer>
+        </section>
+        <section>
+            <h3>Enlaces Rápidos</h3>
+            <ul class="style2">
+                <li><a href="#">Enlace 1</a></li>
+                <li><a href="#">Enlace 2</a></li>
+                <li><a href="#">Enlace 3</a></li>
+                <li><a href="#">Enlace 4</a></li>
+                <li><a href="#">Enlace 5</a></li>
+                <li><a href="#">Enlace 6</a></li>
+            </ul>
+        </section>
+    </div>
+</div>
 {% endblock %}
